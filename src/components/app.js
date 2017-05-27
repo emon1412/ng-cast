@@ -1,7 +1,7 @@
 angular.module('video-player')
 .controller('appCtrl', function() {
   this.videos = window.exampleVideoData;
-  this.currentVideo = window.exampleVideoData[0];
+  this.currentVideo = this.videos[0];
   this.click = function(video) {
     console.log('in click video: ', video)
     this.currentVideo = video;
