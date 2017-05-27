@@ -4,13 +4,14 @@ angular.module('video-player')
   return {
     // TODO
     scope: {
-      video: '<',
-      concatYoutubeUrl: '<'
+      video: '='
     },
     controllerAs: 'ctrl',
     bindToController: true,
     restrict: 'E',
     templateUrl: 'src/templates/videoPlayer.html',
-    controller: function() {}
+    controller: function() {
+      setTimeout(function() {console.log('this.video: ',this.video)}.bind(this), 1000)
+    }
   };
 });
